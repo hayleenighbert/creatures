@@ -2,11 +2,20 @@
 <html>
 <head>
   <title>Creatures</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+ <script src="//code.jquery.com/jquery.js"></script>
+ <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Amatic+SC" />
+	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
+
+<nav class="navbar navbar-default navbar-fixed-top white">
+  <div class="well">
+    <center>Monsters</center>
+  </div>
+</nav>
 
 <%= yield %>
 

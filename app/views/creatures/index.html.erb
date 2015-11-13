@@ -1,0 +1,21 @@
+<div class="container">
+	<img src="https://cdn.tutsplus.com/vector/authors/sharon-milne/amanda_tut_yeti_final.jpg" height="400px" class="image"><br>
+		<div class="row">
+		<h3>Create your monster!</h3><br>
+			<%= link_to '♥', new_creature_path, class: 'btn btn-success' %>
+		</div>
+</div><br><br>
+
+
+<% @creatures.each do |creature| %>
+<div class="container">
+	<div class="well">
+  			<h2><%= creature.name %></h2>
+  			<p><%= creature.description %></p>
+
+  				<%= link_to 'Show Creature', creature, class: 'btn btn-success'%>
+  				<%= link_to 'Edit Creature', edit_creature_path(creature), class: 'btn btn-success'%>
+  				<%= link_to 'Delete Creature', creature, class: 'btn btn-success', method: :delete %>
+  </div>
+</div>
+<% end %>
