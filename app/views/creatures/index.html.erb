@@ -1,21 +1,28 @@
 <div class="container">
-	<img src="https://cdn.tutsplus.com/vector/authors/sharon-milne/amanda_tut_yeti_final.jpg" height="400px" class="image"><br>
+	<img src="https://cdn.tutsplus.com/vector/authors/sharon-milne/amanda_tut_yeti_final.jpg" height="500px" class="image"><br>
 		<div class="row">
-		<h3>Create your monster!</h3><br>
-			<%= link_to '♥', new_creature_path, class: 'btn btn-success' %>
+			<%= link_to '♥', new_creature_path, class: 'btn btn-danger' %><br>
+			<h3>Create Your Monster!</h3>
 		</div>
 </div><br><br>
-
+<div class="container">
+	<div class="well">
+		<h1>Monster House</h1><br>
+		<img src="http://clipartist.net/openclipart.org/2013/September/abstract_shop_store_house_12-999px.png" height="300px"><br>
+		<h3>The monsters that live here are...</h3>
+</div>
+</div>
 
 <% @creatures.each do |creature| %>
 <div class="container">
 	<div class="well">
-  			<h2><%= creature.name %></h2>
+  			<h1><%= creature.name %></h1>
   			<p><%= creature.description %></p>
 
-  				<%= link_to 'Show Creature', creature, class: 'btn btn-success'%>
-  				<%= link_to 'Edit Creature', edit_creature_path(creature), class: 'btn btn-success'%>
-  				<%= link_to 'Delete Creature', creature, class: 'btn btn-success', method: :delete %>
+  				<%= link_to 'Show Creature', creature, class: 'btn btn-info'%>
+  				<%= link_to 'Edit Creature', edit_creature_path(creature), class: 'btn btn-info'%>
+  				<%= link_to 'Delete Creature', creature, class: 'btn btn-info', method: :delete %>
+  		</div>
   </div>
 </div>
 <% end %>

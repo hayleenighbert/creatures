@@ -1,6 +1,19 @@
-<%= link_to 'Back Home', creatures_path, class: 'btn btn-primary' %>
+<div class="container">
+	<div class="well">
+	<h1>Meet your monster!</h1><br>
+	<img src="http://33.media.tumblr.com/eb420f60dec4c53cdf004a8fcb19f757/tumblr_my7kpizjId1qcpijho2_250.gif">
+	</div>
+</div>
 
-<div class="row">
-  <h2><%= @creature.name %></h2>
-  <p><%= @creature.description %></p>
+
+
+<div class="container">
+	<div class="well">
+  <h3><strong>Name:</strong></h3><br>
+  <%= @creature.name %>
+  <h3><strong>Description:</strong></h3><br>
+  <p><%= @creature.description %></p><br>
+
+<%= link_to 'Back Home', creatures_path, class: 'btn btn-primary' %>
+	</div>
 </div>
